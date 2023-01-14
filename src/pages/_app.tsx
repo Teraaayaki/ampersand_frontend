@@ -1,9 +1,11 @@
+/* eslint-disable require-jsdoc */
 import type { AppProps } from "next/app";
+import React, { ReactElement } from "react";
 import Head from "next/head";
 
 import "../styles/globals.css";
 
-function MyApp({ Component, pageProps }: AppProps) {
+function MyApp({ Component, pageProps }: AppProps): ReactElement {
   return (
     <>
       <Head>

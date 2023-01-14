@@ -1,3 +1,4 @@
+/* eslint-disable require-jsdoc */
 import Document, {
   Html,
   Head,
@@ -5,10 +6,11 @@ import Document, {
   NextScript,
   DocumentContext,
 } from "next/document";
+import React from "react";
 import { ServerStyleSheet } from "styled-components";
 
 export default class MyDocument extends Document {
-  static async getInitialProps(ctx: DocumentContext) {
+  static async getInitialProps(ctx: DocumentContext): Promise<any> {
     const sheet = new ServerStyleSheet();
     const originalRenderPage = ctx.renderPage;
 
@@ -34,7 +36,7 @@ export default class MyDocument extends Document {
     }
   }
 
-  render() {
+  render(): any {
     return (
       <Html>
         <Head />
